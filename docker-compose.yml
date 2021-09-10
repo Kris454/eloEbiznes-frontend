@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ebiznes-frontend:
+    build: .
+    environment:
+      - REACT_APP_SERVER_URL=http://localhost:9000
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/opt/ebiznes-frontend
+    working_dir: /opt/ebiznes-frontend
+#   command: bash
+    command: npm start
